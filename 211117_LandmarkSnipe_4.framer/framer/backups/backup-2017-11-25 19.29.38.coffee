@@ -169,7 +169,7 @@ for i in [0..4]
 	legendtext = new TextLayer
 		parent:legends[i]
 		width: Screen.width / 5 - 1
-		backgroundColor: "white"
+		backgroundColor: "null"
 		y:17
 # 		x:((Screen.width / 5 - 1)*i)
 		fontSize: 11
@@ -183,26 +183,6 @@ for i in [0..4]
 
 
 
-	button.onLongPressStart (event, layer) ->
-		for i in [0..4]
-
-			legends[i].animate
-				properties:
-					opacity:1
-
-			disks[i].animate
-				properties:
-					opacity:1
-
-	button.onLongPressEnd (event, layer) ->
-		for i in [0..4]
-			legends[i].animate
-				properties:
-					opacity:0
-			disks[i].animate
-				properties:
-					opacity:0
-		button.enabled = false
 
 
 #Setup GUI
@@ -215,24 +195,33 @@ targetPrompt = new TextLayer
 		text: ""
 		textAlign: "center"
 
+Prompt = new TextLayer
+		parent:PromptBox
+		x:Align.center
+		fontFamily: "Avenir"
+		fontSize: 12
+		fontWeight: 300
+		text: ""
+		textAlign: "center"
+
+
 
 oval.states.a =
-	scale: 5.00
+	scale: 7.00
 	
 oval.states.b =
 	scale: 1
 
 counter = 0
 
-box = new Layer
-	height: 106
+
 
 button2.onTapStart ->
 	oval.animate("b")
 
 	counter = (counter+1) % 5
 	for i in [0..4]
-		#pointers[i].opacity=0
+# 		pointers[i].opacity=0
 		disks[i].opacity=0
 
 		legendsColor[i].borderColor="grey"
@@ -247,9 +236,40 @@ button2.onTapStart ->
 	if counter != 0
 		for i in [0..counter-1]
 			pointers[i].opacity=1
-			legendsColor[i].borderColor=Palette[i]
-			legendsColor[i].backgroundColor="white"
-	box.html=counter
+
+	for i in [0..counter]
+		legendsColor[i].borderColor=Palette[i]
+		legendsColor[i].backgroundColor="white"
+
+	Prompt.text = "Point at"
+	Prompt.textAlign= "center"
+	Prompt.x= Align.center
+# 	if counter == 0
+# 		for i in [0..4]
+# 			pointers[i].opacity=0
+
+	button.onLongPressStart (event, layer) ->
+		for i in [0..counter]
+
+			legends[i].animate
+				properties:
+					opacity:1
+
+			disks[i].animate
+				properties:
+					opacity:1
+
+	button.onLongPressEnd (event, layer) ->
+		for i in [0..counter]
+			legends[i].animate
+				properties:
+					opacity:0
+			disks[i].animate
+				properties:
+					opacity:0
+		button.enabled = false
+
+
 
 
 counter2 = 0
@@ -269,6 +289,20 @@ button2.onTapEnd ->
 	button2.html= counter2
 	button2.color = "black"
 	button.html="peek"
+
+
+	Prompt.text = ""
+
+	Utils.delay 1,->
+		Prompt.text = "Tap & Hold for Next "
+		Prompt.textAlign= "center"
+		Prompt.x= Align.center
+
+	Utils.delay .5,->
+		targetPrompt.text = "Not Bad"
+		targetPrompt.color = Palette[counter]
+		targetPrompt.textAlign= "center"
+		targetPrompt.x= Align.center
 
 
 	LandmarkDistance =distance(coordinates, targetCoordinatesGL[counter])
