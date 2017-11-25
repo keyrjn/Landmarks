@@ -1,5 +1,4 @@
 app.coffee
-framer/backups/backup-2017-11-25 03.09.47.coffee
 framer/backups/backup-2017-11-25 03.18.47.coffee
 framer/backups/backup-2017-11-25 03.19.47.coffee
 framer/backups/backup-2017-11-25 03.21.47.coffee
