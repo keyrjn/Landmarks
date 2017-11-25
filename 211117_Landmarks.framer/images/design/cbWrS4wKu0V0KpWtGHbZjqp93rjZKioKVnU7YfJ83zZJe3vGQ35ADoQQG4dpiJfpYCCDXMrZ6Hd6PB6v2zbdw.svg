@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="140px" viewBox="0 0 206 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>FarRadar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="76.2496165%" x2="50%" y2="1.66142196%" id="linearGradient-1">
+            <stop stop-color="#FF0000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FF0000" stop-opacity="0.2" offset="54.8469388%"></stop>
+            <stop stop-color="#FF0000" stop-opacity="0.4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="close-copy" transform="translate(-84.000000, -168.000000)">
+            <g id="FarRadar" transform="translate(84.000000, 168.000000)">
+                <g id="LowRadar" fill="url(#linearGradient-1)" opacity="0.5">
+                    <path d="M0.702849367,35.633499 C28.6840601,13.7954926 63.8896896,0.783801618 102.134362,0.783801618 C140.938393,0.783801618 176.613834,14.178888 204.788967,36.5973432 L103.080357,183.153797 L0.702849367,35.633499 Z"></path>
+                </g>
+                <path d="M202.201114,40.741481 L205.25926,36.3349241 C177.135908,14.0743971 141.587708,0.783801618 102.935323,0.783801618 C64.5397371,0.783801618 29.2072261,13.898383 1.17290721,35.8924283 L3.82930079,39.7200901 C30.9919422,18.4578714 65.200692,5.78380162 102.369629,5.78380162 C140.129948,5.78380162 174.835132,18.8643844 202.201114,40.741481 Z" id="Combined-Shape" fill-opacity="0.7" fill="#FF0000"></path>
+            </g>
+        </g>
+    </g>
+</svg>

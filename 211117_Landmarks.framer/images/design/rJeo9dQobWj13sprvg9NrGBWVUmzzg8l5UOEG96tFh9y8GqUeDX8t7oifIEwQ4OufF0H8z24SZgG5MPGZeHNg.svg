@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="83px" viewBox="0 0 47 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="97.4250638%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.0352411685" offset="0%"></stop>
+            <stop stop-color="#F30D0D" stop-opacity="0.293959466" offset="45.6234056%"></stop>
+            <stop stop-color="#FF0000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.7">
+        <g id="close-copy" transform="translate(-164.000000, -269.000000)">
+            <g id="Group" transform="translate(164.000000, 269.000000)">
+                <g id="CloseRadar" fill="url(#linearGradient-1)">
+                    <path d="M0.281279846,4.46334049 C7.62954961,1.58201554 15.630025,0 24,0 C31.9005462,0 39.4718772,1.40953758 46.4762356,3.9908553 L23.3087179,82.1343578 L0.281279846,4.46334049 Z" id="LowRadar"></path>
+                </g>
+                <path d="M45.193887,8.31618779 L46.4762356,3.9908553 C39.4718772,1.40953758 31.9005462,-4.26325641e-14 24,-4.26325641e-14 C15.630025,-4.26325641e-14 7.62954961,1.58201554 0.281279846,4.46334049 L1.56576319,8.79587318 C8.50304316,6.02434257 16.0735069,4.5 24,4.5 C31.4566081,4.5 38.5981469,5.84897235 45.193887,8.31618779 Z" id="Combined-Shape" fill="#FF0000"></path>
+            </g>
+        </g>
+    </g>
+</svg>
