@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<script type="text/javascript">
+		// This automatically sets the right viewport scale on mobile devices
+		(function() {
+ 		var scale = 1 / window.devicePixelRatio
+ 		var viewport = "width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no"
+ 		var iOS = /iPad|iPhone|iPod/.test(navigator.platform)
+ 		if (iOS) { viewport += ", shrink-to-fit=no" }
+ 		document.write("<meta name=\"viewport\" content=\"" + viewport + "\">")
+		})()
+		</script>
+
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png">
+		<link rel="apple-touch-icon" href="framer/images/icon-76.png" sizes="76x76">
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="framer/images/icon-152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
+		<link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
+
+		<link rel="stylesheet" type="text/css" href="framer/style.css?nocache=6d40bc53861208d298f85019e08849ff">
+
+		<script src="framer/coffee-script.js"></script>
+		<script src="framer/framer.js?nocache=5354df4620043edc97b82b2ecadc45e4"></script>
+		<script src="framer/framer.generated.js?nocache=bbb2d1c532be42ff784ab24787b872d6"></script>
+		<script src="framer/framer.modules.js?nocache=a9f065f5c649171ff364780a70485114"></script>
+		<script src="framer/framer.vekter.js"></script>
+		<script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 235;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
+  var DeviceOrientationManager, Palette, Prompt, TargetNames, coordinates, counter, counter2, disk, disks, distance, error, heading, i, j, k, l, legend, legendColor, legends, legendsColor, legendstext, legendtext, m, map, mapElement, mapLayer, mapboxgl, n, orientationManager, pointer, pointers, rotationNormalizer, success, targetCoordinatesGL, targetPrompt;
+
+  DeviceOrientationManager = require("DeviceOrientationManager").DeviceOrientationManager;
+
+  orientationManager = window.__framerNew("orientationManager", "1:21-1:48", "undefined",new DeviceOrientationManager);
+
+  Screen.backgroundColor = "28affa";
+
+  mapboxgl = require("npm").mapboxgl;
+
+  mapLayer = window.__framerNew("mapLayer", "7:15-11:0", "#b7196cd5",new Layer({
+    height: Screen.height,
+    width: Screen.width,
+    parent: nullLayer
+  }));
+
+  mapLayer.html = "<div id='map'></div>";
+
+  mapLayer.ignoreEvents = false;
+
+  mapElement = mapLayer.querySelector("#map");
+
+  mapElement.style.height = Screen.height + 'px';
+
+  mapboxgl.accessToken = 'pk.eyJ1Ijoia2V5dXJqYWluMjEiLCJhIjoiY2lpamk4eWl5MDEycXVka242bTB5aXk5MCJ9.YwZqFTtsJKymb8vAENy3wA';
+
+  map = window.__framerNew("map", "21:10-26:0", "?",new mapboxgl.Map({
+    container: mapElement,
+    zoom: 13,
+    center: [12.579, 55.679],
+    style: 'mapbox://styles/keyurjain21/cj9n6g9zf36wv2slnar5m3vxd'
+  }));
+
+  coordinates = {
+    latitude: 55.679,
+    longitude: 12.579
+  };
+
+  success = function(p) {
+    coordinates.latitude = p.coords.latitude;
+    coordinates.longitude = p.coords.longitude;
+    locationCircle.backgroundColor = "green";
+  };
+
+  error = function(msg) {
+    locationCircle.backgroundColor = "red";
+  };
+
+  targetCoordinatesGL = [
+    {
+      latitude: 55.680,
+      longitude: 12.587
+    }, {
+      latitude: 55.672,
+      longitude: 12.523
+    }, {
+      latitude: 55.674,
+      longitude: 12.569
+    }, {
+      latitude: 55.692,
+      longitude: 12.599
+    }, {
+      latitude: 55.674,
+      longitude: 12.598
+    }
+  ];
+
+  locationCircle.onTap(function(event, layer) {
+    navigator.geolocation.getCurrentPosition(success, error);
+    return Utils.delay(1, function() {
+      return map.flyTo({
+        center: [coordinates.longitude, coordinates.latitude]
+      });
+    });
+  });
+
+  distance = function(originCoordinates, destinationCoordinates) {
+    var R, a, c, d, degToRad, lat1, lat2, lon1, lon2, Δλ, Δφ, φ1, φ2;
+    degToRad = Math.PI / 180;
+    lat1 = originCoordinates.latitude;
+    lon1 = originCoordinates.longitude;
+    lat2 = destinationCoordinates.latitude;
+    lon2 = destinationCoordinates.longitude;
+    R = 6371000;
+    φ1 = lat1 * degToRad;
+    φ2 = lat2 * degToRad;
+    Δφ = (lat2 - lat1) * degToRad;
+    Δλ = (lon2 - lon1) * degToRad;
+    a = Math.sin(Δφ / 2) * Math.sin(Δφ / 2) + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+    c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    d = R * c;
+    return d;
+  };
+
+  heading = function(originCoordinates, destinationCoordinates) {
+    var angle, degToRad, headingAngle, lat1, lat2, lon1, lon2;
+    degToRad = Math.PI / 180;
+    lat1 = originCoordinates.latitude * degToRad;
+    lon1 = originCoordinates.longitude * degToRad;
+    lat2 = destinationCoordinates.latitude * degToRad;
+    lon2 = destinationCoordinates.longitude * degToRad;
+    angle = Math.atan2(Math.sin(lon2 - lon1) * Math.cos(lat2), Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1));
+    headingAngle = angle * 180 / Math.PI;
+    if (headingAngle < 0) {
+      headingAngle += 360;
+    }
+    return headingAngle;
+  };
+
+  DeviceOrientationManager = require("DeviceOrientationManager").DeviceOrientationManager;
+
+  orientationManager = window.__framerNew("orientationManager", "96:21-96:48", "undefined",new DeviceOrientationManager);
+
+  Screen.backgroundColor = "white";
+
+  rotationNormalizer = Utils.rotationNormalizer();
+
+  orientationManager.onOrientationChange(function(data) {
+    var NorthAngle, compassHeading;
+    compassHeading = data.compassHeading;
+    if (data.elevation < 0) {
+      compassHeading *= -1;
+    }
+    return NorthAngle = rotationNormalizer(compassHeading);
+  });
+
+  Palette = ["orange", "green", "blue", "purple", "red"];
+
+  TargetNames = ["Nyhavn Boats", "København Zoo", "Tivoli", "Little Mermaid", "Christiania Church"];
+
+  disks = [];
+
+  for (i = j = 0; j <= 4; i = ++j) {
+    disk = window.__framerNew("disk", "112:12-121:0", "#e5121ad7",new Layer({
+      width: 330,
+      height: 330,
+      backgroundColor: "rgba(2, 2, 2, 0.005)",
+      borderRadius: 200,
+      borderWidth: 0,
+      x: Align.center,
+      y: Align.center,
+      opacity: 0
+    }));
+    disks.push(disk);
+  }
+
+  pointers = [];
+
+  for (i = k = 0; k <= 4; i = ++k) {
+    pointer = window.__framerNew("pointer", "125:15-135:0", "#b12456f8",new Layer({
+      parent: disks[i],
+      width: 16,
+      height: 16,
+      borderWidth: 3,
+      borderColor: Palette[i],
+      backgroundColor: "white",
+      borderRadius: 15,
+      x: Align.center,
+      y: Align.center
+    }));
+    pointers.push(pointer);
+  }
+
+  legends = [];
+
+  for (i = l = 0; l <= 4; i = ++l) {
+    legend = window.__framerNew("legend", "140:14-148:0", "#d2393d1e",new Layer({
+      width: Screen.width / 5 - 1,
+      height: 9,
+      backgroundColor: "null",
+      x: (Screen.width / 5 - 1) * i,
+      y: 40,
+      opacity: 0,
+      Align: Align.center
+    }));
+    legends.push(legend);
+  }
+
+  legendsColor = [];
+
+  for (i = m = 0; m <= 4; i = ++m) {
+    legendColor = window.__framerNew("legendColor", "153:19-163:0", "#9e67a841",new Layer({
+      parent: legends[i],
+      width: 11,
+      height: 11,
+      borderWidth: 3,
+      borderColor: "grey",
+      backgroundColor: "white",
+      borderRadius: 15,
+      y: Align.center(),
+      x: Align.center()
+    }));
+    legendsColor.push(legendColor);
+  }
+
+  legendstext = [];
+
+  for (i = n = 0; n <= 4; i = ++n) {
+    legendtext = window.__framerNew("legendtext", "168:18-181:0", "#afe11437",new TextLayer({
+      parent: legends[i],
+      width: Screen.width / 5 - 1,
+      backgroundColor: "null",
+      y: 17,
+      fontSize: 11,
+      text: TargetNames[i],
+      color: "grey",
+      padding: {
+        left: 10,
+        right: 10
+      },
+      textAlign: Align.center
+    }));
+    legendstext.push(legendtext);
+  }
+
+  targetPrompt = window.__framerNew("targetPrompt", "188:19-196:0", "#d87809ba",new TextLayer({
+    parent: targetPromptBox,
+    x: Align.center,
+    fontFamily: "Avenir",
+    fontSize: 28,
+    fontWeight: 500,
+    text: "",
+    textAlign: "center"
+  }));
+
+  Prompt = window.__framerNew("Prompt", "197:13-207:0", "#10486bed6",new TextLayer({
+    parent: PromptBox,
+    x: Align.center,
+    fontFamily: "Avenir",
+    fontSize: 12,
+    fontWeight: 300,
+    text: "",
+    textAlign: "center"
+  }));
+
+  oval.states.a = {
+    scale: 7.00
+  };
+
+  oval.states.b = {
+    scale: 1
+  };
+
+  counter = 0;
+
+  button2.onTapStart(function() {
+    var o, q, ref, ref1, s;
+    window.__framerAnimation("#a46eb6fe",oval.animate("b"));
+    counter = (counter + 1) % 5;
+    for (i = o = 0; o <= 4; i = ++o) {
+      disks[i].opacity = 0;
+      legendsColor[i].borderColor = "grey";
+      legendsColor[i].backgroundColor = "grey";
+      legendsColor[i].backgroundColor = "grey";
+    }
+    targetPrompt.text = TargetNames[counter];
+    targetPrompt.color = Palette[counter];
+    targetPrompt.textAlign = "center";
+    targetPrompt.x = Align.center;
+    if (counter !== 0) {
+      for (i = q = 0, ref = counter - 1; 0 <= ref ? q <= ref : q >= ref; i = 0 <= ref ? ++q : --q) {
+        pointers[i].opacity = 1;
+      }
+    }
+    for (i = s = 0, ref1 = counter; 0 <= ref1 ? s <= ref1 : s >= ref1; i = 0 <= ref1 ? ++s : --s) {
+      legendsColor[i].borderColor = Palette[i];
+      legendsColor[i].backgroundColor = "white";
+    }
+    Prompt.text = "Point at";
+    Prompt.textAlign = "center";
+    Prompt.x = Align.center;
+    button.onLongPressStart(function(event, layer) {
+      var ref2, results, t;
+      results = [];
+      for (i = t = 0, ref2 = counter; 0 <= ref2 ? t <= ref2 : t >= ref2; i = 0 <= ref2 ? ++t : --t) {
+        legends[i].animate({
+          properties: {
+            opacity: 1
+          }
+        });
+        results.push(disks[i].animate({
+          properties: {
+            opacity: 1
+          }
+        }));
+      }
+      return results;
+    });
+    return button.onLongPressEnd(function(event, layer) {
+      var ref2, t;
+      for (i = t = 0, ref2 = counter; 0 <= ref2 ? t <= ref2 : t >= ref2; i = 0 <= ref2 ? ++t : --t) {
+        legends[i].animate({
+          properties: {
+            opacity: 0
+          }
+        });
+        disks[i].animate({
+          properties: {
+            opacity: 0
+          }
+        });
+      }
+      return button.enabled = false;
+    });
+  });
+
+  counter2 = 0;
+
+  button2.onTapEnd(function() {
+    var LandmarkDistance;
+    window.__framerAnimation("#175031275",oval.animate("a"));
+    counter2 = (counter2 + 1) % 5;
+    disks[counter2].animate({
+      properties: {
+        opacity: 1
+      }
+    });
+    button2.html = counter2;
+    button2.color = "black";
+    button.html = "peek";
+    Prompt.text = "";
+    Utils.delay(1, function() {
+      Prompt.text = "Tap & Hold for Next ";
+      Prompt.textAlign = "center";
+      return Prompt.x = Align.center;
+    });
+    Utils.delay(.5, function() {
+      targetPrompt.text = "Not Bad";
+      targetPrompt.color = Palette[counter];
+      targetPrompt.textAlign = "center";
+      return targetPrompt.x = Align.center;
+    });
+    LandmarkDistance = distance(coordinates, targetCoordinatesGL[counter]);
+    if (LandmarkDistance < 1000) {
+      return pointers[counter].y = 95;
+    } else if (LandmarkDistance < 2000 & LandmarkDistance > 1000) {
+      return pointers[counter].y = 45;
+    } else if (LandmarkDistance > 2000) {
+      return pointers[counter].y = -5;
+    }
+  });
+
+  rotationNormalizer = Utils.rotationNormalizer();
+
+  orientationManager.onOrientationChange(function(data) {
+    var NorthAngle, angle, angles, b, compassHeading, o, q, r, sourceCoordinates, targetCoordinates;
+    compassHeading = data.compassHeading;
+    if (data.elevation < 0) {
+      compassHeading *= -1;
+    }
+    NorthAngle = rotationNormalizer(compassHeading);
+    sourceCoordinates = coordinates;
+    targetCoordinates = targetCoordinatesGL;
+    angles = [];
+    for (i = o = 0; o <= 4; i = ++o) {
+      angle = NorthAngle - (360 - Math.abs(heading(sourceCoordinates, targetCoordinates[i])));
+      angles.push(angle);
+    }
+    for (i = q = 0; q <= 4; i = ++q) {
+      disks[i].animate({
+        properties: {
+          rotation: angles[i]
+        },
+        time: 0.3
+      });
+    }
+    r = Math.floor(data.compassHeading);
+    if (r <= 180) {
+      b = -r;
+    } else {
+      b = 360 - r;
+    }
+    return window.__framerAnimation("#fc1fc432",compass.animate({
+      properties: {
+        rotation: NorthAngle
+      },
+      time: 0.3
+    }));
+  });
+
+}).call(this);
+})</script>
+
+	</head>
+	<body>
+	</body>
+</html>

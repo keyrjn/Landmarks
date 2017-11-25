@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="237px" height="197px" viewBox="0 0 237 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>LowRadar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="1.65816327%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.0352411685" offset="0%"></stop>
+            <stop stop-color="#FF0000" stop-opacity="0.3" offset="41.0435268%"></stop>
+            <stop stop-color="#FF0000" offset="99.7468909%"></stop>
+            <stop stop-color="#FF0000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.446897645">
+        <g id="close" transform="translate(-69.000000, -155.000000)" fill="url(#linearGradient-1)">
+            <g id="FarRadar" transform="translate(69.000000, 155.000000)">
+                <path d="M0.697999114,45.3302009 C32.1932798,17.4350622 73.618942,0.5 119,0.5 C163.988395,0.5 205.089547,17.1432663 236.482228,44.6085719 L118.308718,196.134358 L0.697999114,45.3302009 Z" id="LowRadar"></path>
+            </g>
+        </g>
+    </g>
+</svg>
