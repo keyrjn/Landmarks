@@ -108,7 +108,7 @@ orientationManager.onOrientationChange (data) ->
 
 
 Palette = ["orange","green","blue","rgba(255, 136, 170,1)","purple"]
-TargetNames = ["Broadway Market","Design Museum","Battersea Power Stn","Oxford Street","Spitalfields",]
+TargetNames = ["Broadway Market","Design Museum","Battersea Power Stn","Oxford Street","Spitalfields"]
 
 disks = []
 for i in [0..4]
