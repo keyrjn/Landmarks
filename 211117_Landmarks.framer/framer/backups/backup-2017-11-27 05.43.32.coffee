@@ -30,21 +30,23 @@ success = (p) ->
 	coordinates.latitude = p.coords.latitude
 	coordinates.longitude = p.coords.longitude
 # 	print coordinates
-	locationCircle.backgroundColor="green"
+	locationIcon.backgroundColor="green"
+
 	return
 
 error = (msg) ->
 #   print "error"
-  locationCircle.backgroundColor="red"
+  locationIcon.backgroundColor="red"
+
   return
 
 #List of coordinates
 targetCoordinatesGL = [
-	{latitude : 51.5367, longitude : -0.071862},
-	{latitude : 51.5028, longitude : -0.071862},
-	{latitude : 51.4811, longitude : -0.144444},
-	{latitude : 51.514958, longitude : -0.1444629},
-	{latitude : 51.5202, longitude : -0.0744}
+	{latitude : 55.680, longitude : 12.587},
+	{latitude : 55.672, longitude : 12.523},
+	{latitude : 55.674, longitude : 12.569},
+	{latitude : 55.692, longitude : 12.599},
+	{latitude : 55.674, longitude : 12.598}
 	]
 
 #Get the device location + Fly to  
@@ -105,8 +107,8 @@ orientationManager.onOrientationChange (data) ->
 	NorthAngle = rotationNormalizer(compassHeading)
 
 
-Palette = ["orange","green","blue","purple","red"]
-TargetNames = ["København Zoo","Tivoli","Vestre Kirkegard","Christiania Church","Nyhavn Boats",]
+Palette = ["orange","green","blue","rgba(255, 136, 170,1)","purple"]
+TargetNames = ["Nyhavn Boats","København Zoo","Tivoli","Little Mermaid","Christiania Church"]
 
 disks = []
 for i in [0..4]
@@ -143,7 +145,7 @@ for i in [0..4]
 		height:9
 		backgroundColor: "null"
 		x: ((Screen.width / 5 - 1)*i)
-		y: 520
+		y: 505
 		opacity: 0
 		Align: Align.center
 	legends.push(legend)
@@ -183,8 +185,6 @@ for i in [0..4]
 
 
 
-
-
 #Setup GUI
 targetPrompt = new TextLayer
 		parent:targetPromptBox
@@ -199,7 +199,7 @@ Prompt = new TextLayer
 		parent:PromptBox
 		x:Align.center
 		fontFamily: "Avenir"
-		fontSize: 12
+		fontSize: 13
 		fontWeight: 300
 		text: ""
 		textAlign: "center"
@@ -259,9 +259,7 @@ button2.onTapStart ->
 	Prompt.textAlign= "center"
 	Prompt.x= Align.center
 	
-	Utils.delay 3,->
-		TutorialText.text="Release to confirm"
-		TutorialText.x= Align.center
+
 
 # 	if counter == 0
 # 		for i in [0..4]
@@ -305,9 +303,9 @@ button2.onTapEnd ->
 # 		for i in [0..counter2-1]
 
 
-	button2.html= counter2
+# 	button2.html= counter2
 	button2.color = "black"
-	button.html="peek"
+# 	button.html="peek"
 
 	TutorialText.text="Tap and hold anywhere to aim"
 	TutorialText.x= Align.center
@@ -391,7 +389,7 @@ shrink = new Animation
 	layer: TutorialText
 	properties: 
 		scale: 1.01
-		opacity: .2
+		opacity: .3
 	time: 0.9
  
 # Alternate between the two animations 

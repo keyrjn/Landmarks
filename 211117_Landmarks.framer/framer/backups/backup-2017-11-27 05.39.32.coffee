@@ -30,14 +30,12 @@ success = (p) ->
 	coordinates.latitude = p.coords.latitude
 	coordinates.longitude = p.coords.longitude
 # 	print coordinates
-	locationCircle.borderColor="green"
-	locationIcon.backgroundColor="red"
+	locationIcon.backgroundColor="green"
 
 	return
 
 error = (msg) ->
 #   print "error"
-  locationCircle.borderColor="red"
   locationIcon.backgroundColor="red"
 
   return
@@ -109,8 +107,8 @@ orientationManager.onOrientationChange (data) ->
 	NorthAngle = rotationNormalizer(compassHeading)
 
 
-Palette = ["orange","green","blue","purple","red"]
-TargetNames = ["København Zoo","Tivoli","Vestre Kirkegard","Christiania Church","Nyhavn Boats",]
+Palette = ["orange","green","blue","rgba(255, 136, 170,1)","purple"]
+TargetNames = ["Broadway Market","Design Museum","Battersea Power Stn","Oxford Street","Spitalfields"]
 
 disks = []
 for i in [0..4]
@@ -147,7 +145,7 @@ for i in [0..4]
 		height:9
 		backgroundColor: "null"
 		x: ((Screen.width / 5 - 1)*i)
-		y: 520
+		y: 505
 		opacity: 0
 		Align: Align.center
 	legends.push(legend)
@@ -187,8 +185,6 @@ for i in [0..4]
 
 
 
-
-
 #Setup GUI
 targetPrompt = new TextLayer
 		parent:targetPromptBox
@@ -203,7 +199,7 @@ Prompt = new TextLayer
 		parent:PromptBox
 		x:Align.center
 		fontFamily: "Avenir"
-		fontSize: 12
+		fontSize: 13
 		fontWeight: 300
 		text: ""
 		textAlign: "center"
@@ -263,9 +259,7 @@ button2.onTapStart ->
 	Prompt.textAlign= "center"
 	Prompt.x= Align.center
 	
-	Utils.delay 3,->
-		TutorialText.text="Release to confirm"
-		TutorialText.x= Align.center
+
 
 # 	if counter == 0
 # 		for i in [0..4]
@@ -309,9 +303,9 @@ button2.onTapEnd ->
 # 		for i in [0..counter2-1]
 
 
-	button2.html= counter2
+# 	button2.html= counter2
 	button2.color = "black"
-	button.html="peek"
+# 	button.html="peek"
 
 	TutorialText.text="Tap and hold anywhere to aim"
 	TutorialText.x= Align.center
@@ -395,7 +389,7 @@ shrink = new Animation
 	layer: TutorialText
 	properties: 
 		scale: 1.01
-		opacity: .2
+		opacity: .3
 	time: 0.9
  
 # Alternate between the two animations 

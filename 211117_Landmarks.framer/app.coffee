@@ -42,11 +42,11 @@ error = (msg) ->
 
 #List of coordinates
 targetCoordinatesGL = [
-	{latitude : 51.5367, longitude : -0.071862},
-	{latitude : 51.5028, longitude : -0.071862},
-	{latitude : 51.4811, longitude : -0.144444},
-	{latitude : 51.514958, longitude : -0.1444629},
-	{latitude : 51.5202, longitude : -0.0744}
+	{latitude : 55.680, longitude : 12.587},
+	{latitude : 55.672, longitude : 12.523},
+	{latitude : 55.674, longitude : 12.569},
+	{latitude : 55.692, longitude : 12.599},
+	{latitude : 55.674, longitude : 12.598}
 	]
 
 #Get the device location + Fly to  
@@ -108,7 +108,7 @@ orientationManager.onOrientationChange (data) ->
 
 
 Palette = ["orange","green","blue","rgba(255, 136, 170,1)","purple"]
-TargetNames = ["Broadway Market","Design Museum","Battersea Power Stn","Oxford Street","Spitalfields"]
+TargetNames = ["Nyhavn Boats","København Zoo","Tivoli","Little Mermaid","Christiania Church"]
 
 disks = []
 for i in [0..4]

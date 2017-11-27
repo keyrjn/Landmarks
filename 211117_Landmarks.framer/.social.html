@@ -32,7 +32,7 @@
 		<script src="framer/framer.generated.js?nocache=55f376a1f3792767461b8513f28e3565"></script>
 		<script src="framer/framer.modules.js?nocache=bf9fd6e98d5e3d5ab54fc50d164f3341"></script>
 		<script src="framer/framer.vekter.js"></script>
-		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 374;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
+		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 1;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
   var DeviceOrientationManager, Palette, Prompt, TargetNames, TutorialText, coordinates, counter, counter2, disk, disks, distance, error, heading, i, intro, j, k, l, legend, legendColor, legends, legendsColor, legendstext, legendtext, m, map, mapElement, mapLayer, mapboxgl, n, orientationManager, pointer, pointers, pulseUp, rotationNormalizer, shrink, success, targetCoordinatesGL, targetPrompt;
 
   DeviceOrientationManager = require("DeviceOrientationManager").DeviceOrientationManager;
@@ -291,7 +291,7 @@
 
   button2.onTapStart(function() {
     var o, q, ref, ref1, s;
-    window.__framerAnimation("#d769a89c",window.__framerNew(undefined, "undefined", "#d769a89c",oval.animate("b")));
+    oval.animate("b");
     counter = (counter + 1) % 5;
     for (i = o = 0; o <= 4; i = ++o) {
       disks[i].opacity = 0;
@@ -356,7 +356,7 @@
 
   button2.onTapEnd(function() {
     var LandmarkDistance;
-    window.__framerAnimation("#a612ba70",window.__framerNew(undefined, "undefined", "#a612ba70",oval.animate("a")));
+    oval.animate("a");
     counter2 = (counter2 + 1) % 5;
     disks[counter2].animate({
       properties: {
@@ -406,12 +406,12 @@
     } else {
       b = 360 - r;
     }
-    return window.__framerAnimation("#cbe21df0",window.__framerNew(undefined, "undefined", "#cbe21df0",compass.animate({
+    return compass.animate({
       properties: {
         rotation: NorthAngle
       },
       time: 0.3
-    })));
+    });
   });
 
   intro = function() {
