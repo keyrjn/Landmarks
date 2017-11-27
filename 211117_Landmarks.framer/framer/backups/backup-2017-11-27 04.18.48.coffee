@@ -30,12 +30,14 @@ success = (p) ->
 	coordinates.latitude = p.coords.latitude
 	coordinates.longitude = p.coords.longitude
 # 	print coordinates
-	locationIcon.backgroundColor="green"
+	locationCircle.borderColor="green"
+	locationIcon.backgroundColor="red"
 
 	return
 
 error = (msg) ->
 #   print "error"
+  locationCircle.borderColor="red"
   locationIcon.backgroundColor="red"
 
   return
@@ -185,6 +187,8 @@ for i in [0..4]
 
 
 
+
+
 #Setup GUI
 targetPrompt = new TextLayer
 		parent:targetPromptBox
@@ -199,7 +203,7 @@ Prompt = new TextLayer
 		parent:PromptBox
 		x:Align.center
 		fontFamily: "Avenir"
-		fontSize: 13
+		fontSize: 12
 		fontWeight: 300
 		text: ""
 		textAlign: "center"
@@ -210,7 +214,7 @@ TutorialText = new TextLayer
 		fontFamily: "Avenir"
 		fontSize: 15
 		fontWeight: 300
-		text: "Tap and hold to aim"
+		text: "Tap and hold anywhere to aim"
 		textAlign: "center"
 		color: "black"
 
@@ -303,7 +307,7 @@ button2.onTapEnd ->
 # 		for i in [0..counter2-1]
 
 
-# 	button2.html= counter2
+	button2.html= counter2
 	button2.color = "black"
 	button.html="peek"
 

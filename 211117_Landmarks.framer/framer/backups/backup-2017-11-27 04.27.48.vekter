@@ -250,12 +250,12 @@
                             },
                             {
                               "length" : 38,
-                              "style" : "SIZE:12",
+                              "style" : "COLOR:rgb(135, 135, 135)",
                               "offset" : 0
                             },
                             {
                               "length" : 38,
-                              "style" : "COLOR:rgb(209, 209, 209)",
+                              "style" : "SIZE:12",
                               "offset" : 0
                             }
                           ],
@@ -267,8 +267,8 @@
                               "FONT:.SFNSText|SFUIText-Regular|.SFUIText",
                               "LETTERSPACING:0",
                               "LINEHEIGHT:1.2",
-                              "SIZE:12",
-                              "COLOR:rgb(209, 209, 209)"
+                              "COLOR:rgb(135, 135, 135)",
+                              "SIZE:12"
                             ]
                           },
                           "text" : "hold to view your discovered landmarks",
@@ -423,13 +423,13 @@
                     "constraintsLocked" : false,
                     "right" : 40,
                     "radiusPerCorner" : false,
-                    "centerAnchorY" : 0.7782764811490126,
+                    "centerAnchorY" : 0.7818671454219031,
                     "visible" : true,
                     "borderLeft" : 1,
                     "heightFactor" : null,
                     "radiusTopLeft" : 0,
                     "targetName" : "tutorial",
-                    "bottom" : 96,
+                    "bottom" : 94,
                     "width" : 295
                   },
                   {
@@ -678,7 +678,7 @@
                 "fillEnabled" : false,
                 "parentid" : ",FTY7&Wp",
                 "borderRight" : 1,
-                "name" : "button2",
+                "name" : "button3",
                 "height" : 493,
                 "borderWidth" : 1,
                 "top" : 0,
@@ -694,71 +694,9 @@
                 "borderLeft" : 1,
                 "heightFactor" : null,
                 "radiusTopLeft" : 0,
-                "targetName" : "button2",
+                "targetName" : "button3",
                 "bottom" : 110,
                 "width" : 375
-              },
-              {
-                "radiusBottomLeft" : 10,
-                "rotation" : 0,
-                "__class" : "RectangleNode",
-                "id" : "jbRmKEq`",
-                "fillColor" : "rgba(125, 125, 125, 0.5)",
-                "aspectRatioLocked" : false,
-                "widthFactor" : null,
-                "opacity" : 1,
-                "clip" : false,
-                "borderColor" : "#222",
-                "left" : null,
-                "locked" : false,
-                "fillGradient" : {
-                  "end" : "rgba(0,0,0,0)",
-                  "alpha" : 1,
-                  "angle" : 0,
-                  "__class" : "LinearGradient",
-                  "start" : "black"
-                },
-                "radius" : 10,
-                "boxShadows" : [
-                  {
-                    "x" : 0,
-                    "color" : "rgba(0,0,0,0.25)",
-                    "enabled" : false,
-                    "y" : 1,
-                    "__class" : "BoxShadow",
-                    "inset" : false,
-                    "blur" : 1
-                  }
-                ],
-                "centerAnchorX" : 0.5,
-                "borderPerSide" : false,
-                "fillType" : "color",
-                "radiusBottomRight" : 10,
-                "children" : [
-
-                ],
-                "fillEnabled" : true,
-                "parentid" : ",FTY7&Wp",
-                "borderRight" : 1,
-                "name" : null,
-                "height" : 2,
-                "borderWidth" : 1,
-                "top" : null,
-                "borderTop" : 1,
-                "radiusTopRight" : 10,
-                "borderBottom" : 1,
-                "borderEnabled" : false,
-                "constraintsLocked" : false,
-                "right" : null,
-                "radiusPerCorner" : false,
-                "centerAnchorY" : 0.9325337331334332,
-                "visible" : true,
-                "borderLeft" : 1,
-                "heightFactor" : null,
-                "radiusTopLeft" : 10,
-                "targetName" : null,
-                "bottom" : 44,
-                "width" : 40
               }
             ],
             "fillEnabled" : true,
@@ -783,6 +721,57 @@
             "targetName" : "nullLayer2",
             "bottom" : 0,
             "width" : 375
+          },
+          {
+            "__class" : "OvalNode",
+            "fillType" : "color",
+            "locked" : false,
+            "centerAnchorX" : 0.4986666666666666,
+            "parentid" : "oW4$|\/ZW",
+            "rotation" : 0,
+            "fillEnabled" : true,
+            "top" : null,
+            "borderWidth" : 1,
+            "right" : null,
+            "borderEnabled" : false,
+            "children" : [
+
+            ],
+            "name" : "button2",
+            "aspectRatioLocked" : true,
+            "id" : "o[bxnbxL",
+            "boxShadows" : [
+              {
+                "x" : 0,
+                "color" : "rgba(0,0,0,0.25)",
+                "enabled" : false,
+                "y" : 2,
+                "__class" : "BoxShadow",
+                "inset" : false,
+                "blur" : 5
+              }
+            ],
+            "constraintsLocked" : false,
+            "left" : null,
+            "bottom" : 119,
+            "height" : 98,
+            "fillGradient" : {
+              "end" : "rgba(0,0,0,0)",
+              "alpha" : 1,
+              "angle" : 0,
+              "__class" : "LinearGradient",
+              "start" : "black"
+            },
+            "width" : 98,
+            "widthFactor" : null,
+            "targetName" : "button2",
+            "heightFactor" : null,
+            "fillColor" : "rgba(186, 186, 186, 0.5)",
+            "borderColor" : "#222",
+            "centerAnchorY" : 0.7481259370314842,
+            "opacity" : 1,
+            "visible" : true,
+            "clip" : false
           },
           {
             "radiusBottomLeft" : 0,
@@ -923,7 +912,7 @@
                 "blur" : 5
               }
             ],
-            "centerAnchorX" : 0.5,
+            "centerAnchorX" : 0.5053333333333333,
             "borderPerSide" : false,
             "radiusBottomRight" : 0,
             "children" : [
@@ -944,7 +933,7 @@
             "originalFilename" : "compass3.svg",
             "borderEnabled" : false,
             "constraintsLocked" : false,
-            "right" : null,
+            "right" : 139,
             "radiusPerCorner" : false,
             "centerAnchorY" : 0.5014992503748126,
             "visible" : true,

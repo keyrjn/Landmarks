@@ -30,23 +30,21 @@ success = (p) ->
 	coordinates.latitude = p.coords.latitude
 	coordinates.longitude = p.coords.longitude
 # 	print coordinates
-	locationIcon.backgroundColor="green"
-
+	locationCircle.borderColor="green"
 	return
 
 error = (msg) ->
 #   print "error"
-  locationIcon.backgroundColor="red"
-
+  locationCircle.borderColor="red"
   return
 
 #List of coordinates
 targetCoordinatesGL = [
-	{latitude : 51.5367, longitude : -0.071862},
-	{latitude : 51.5028, longitude : -0.071862},
-	{latitude : 51.4811, longitude : -0.144444},
-	{latitude : 51.514958, longitude : -0.1444629},
-	{latitude : 51.5202, longitude : -0.0744}
+	{latitude : 55.672, longitude : 12.523},
+	{latitude : 55.674, longitude : 12.569},
+	{latitude : 55.663, longitude : 12.538},
+	{latitude : 55.674, longitude : 12.598},
+	{latitude : 55.680, longitude : 12.587}
 	]
 
 #Get the device location + Fly to  
@@ -107,8 +105,8 @@ orientationManager.onOrientationChange (data) ->
 	NorthAngle = rotationNormalizer(compassHeading)
 
 
-Palette = ["orange","green","blue","rgba(255, 136, 170,1)","purple"]
-TargetNames = ["Broadway Market","Design Museum","Battersea Power Stn","Oxford Street","Spitalfields",]
+Palette = ["orange","green","blue","purple","red"]
+TargetNames = ["København Zoo","Tivoli","Vestre Kirkegard","Christiania Church","Nyhavn Boats",]
 
 disks = []
 for i in [0..4]
@@ -185,6 +183,8 @@ for i in [0..4]
 
 
 
+
+
 #Setup GUI
 targetPrompt = new TextLayer
 		parent:targetPromptBox
@@ -199,7 +199,7 @@ Prompt = new TextLayer
 		parent:PromptBox
 		x:Align.center
 		fontFamily: "Avenir"
-		fontSize: 13
+		fontSize: 12
 		fontWeight: 300
 		text: ""
 		textAlign: "center"
@@ -210,7 +210,7 @@ TutorialText = new TextLayer
 		fontFamily: "Avenir"
 		fontSize: 15
 		fontWeight: 300
-		text: "Tap and hold to aim"
+		text: "Tap and hold anywhere to aim"
 		textAlign: "center"
 		color: "black"
 
@@ -259,7 +259,9 @@ button2.onTapStart ->
 	Prompt.textAlign= "center"
 	Prompt.x= Align.center
 	
-
+	Utils.delay 3,->
+		TutorialText.text="Release to confirm"
+		TutorialText.x= Align.center
 
 # 	if counter == 0
 # 		for i in [0..4]
@@ -303,7 +305,7 @@ button2.onTapEnd ->
 # 		for i in [0..counter2-1]
 
 
-# 	button2.html= counter2
+	button2.html= counter2
 	button2.color = "black"
 	button.html="peek"
 

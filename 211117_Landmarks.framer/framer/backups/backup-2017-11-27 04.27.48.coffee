@@ -303,7 +303,7 @@ button2.onTapEnd ->
 # 		for i in [0..counter2-1]
 
 
-# 	button2.html= counter2
+	button2.html= counter2
 	button2.color = "black"
 	button.html="peek"
 
