@@ -145,7 +145,7 @@ for i in [0..4]
 		height:9
 		backgroundColor: "null"
 		x: ((Screen.width / 5 - 1)*i)
-		y: 520
+		y: 505
 		opacity: 0
 		Align: Align.center
 	legends.push(legend)

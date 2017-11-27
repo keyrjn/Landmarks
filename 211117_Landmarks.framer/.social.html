@@ -32,8 +32,8 @@
 		<script src="framer/framer.generated.js?nocache=55f376a1f3792767461b8513f28e3565"></script>
 		<script src="framer/framer.modules.js?nocache=bf9fd6e98d5e3d5ab54fc50d164f3341"></script>
 		<script src="framer/framer.vekter.js"></script>
-		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 54;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
-  var DeviceOrientationManager, Palette, Prompt, TargetNames, coordinates, counter, counter2, disk, disks, distance, error, heading, i, intro, j, k, l, legend, legendColor, legends, legendsColor, legendstext, legendtext, m, map, mapElement, mapLayer, mapboxgl, n, orientationManager, pointer, pointers, rotationNormalizer, success, targetCoordinatesGL, targetPrompt;
+		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 368;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
+  var DeviceOrientationManager, Palette, Prompt, TargetNames, TutorialText, coordinates, counter, counter2, disk, disks, distance, error, heading, i, intro, j, k, l, legend, legendColor, legends, legendsColor, legendstext, legendtext, m, map, mapElement, mapLayer, mapboxgl, n, orientationManager, pointer, pointers, pulseUp, rotationNormalizer, shrink, success, targetCoordinatesGL, targetPrompt;
 
   DeviceOrientationManager = require("DeviceOrientationManager").DeviceOrientationManager;
 
@@ -74,29 +74,29 @@
   success = function(p) {
     coordinates.latitude = p.coords.latitude;
     coordinates.longitude = p.coords.longitude;
-    locationCircle.backgroundColor = "green";
+    locationIcon.backgroundColor = "green";
   };
 
   error = function(msg) {
-    locationCircle.backgroundColor = "red";
+    locationIcon.backgroundColor = "red";
   };
 
   targetCoordinatesGL = [
     {
-      latitude: 55.672,
-      longitude: 12.523
+      latitude: 51.5367,
+      longitude: -0.071862
     }, {
-      latitude: 55.674,
-      longitude: 12.569
+      latitude: 51.5028,
+      longitude: -0.071862
     }, {
-      latitude: 55.663,
-      longitude: 12.538
+      latitude: 51.4811,
+      longitude: -0.144444
     }, {
-      latitude: 55.674,
-      longitude: 12.598
+      latitude: 51.514958,
+      longitude: -0.1444629
     }, {
-      latitude: 55.680,
-      longitude: 12.587
+      latitude: 51.5202,
+      longitude: -0.0744
     }
   ];
 
@@ -144,7 +144,7 @@
 
   DeviceOrientationManager = require("DeviceOrientationManager").DeviceOrientationManager;
 
-  orientationManager = window.__framerNew("orientationManager", "96:21-96:48", "undefined",new DeviceOrientationManager);
+  orientationManager = window.__framerNew("orientationManager", "98:21-98:48", "undefined",new DeviceOrientationManager);
 
   Screen.backgroundColor = "white";
 
@@ -159,14 +159,14 @@
     return NorthAngle = rotationNormalizer(compassHeading);
   });
 
-  Palette = ["orange", "green", "blue", "purple", "red"];
+  Palette = ["orange", "green", "blue", "rgba(255, 136, 170,1)", "purple"];
 
-  TargetNames = ["København Zoo", "Tivoli", "Vestre Kirkegard", "Christiania Church", "Nyhavn Boats"];
+  TargetNames = ["Broadway Market", "Design Museum", "Battersea Power Stn", "Oxford Street", "Spitalfields"];
 
   disks = [];
 
   for (i = j = 0; j <= 4; i = ++j) {
-    disk = window.__framerNew("disk", "112:12-121:0", "#e5121ad7",new Layer({
+    disk = window.__framerNew("disk", "114:12-123:0", "#b4d47495",new Layer({
       width: 330,
       height: 330,
       backgroundColor: "rgba(2, 2, 2, 0.005)",
@@ -182,7 +182,7 @@
   pointers = [];
 
   for (i = k = 0; k <= 4; i = ++k) {
-    pointer = window.__framerNew("pointer", "125:15-135:0", "#b12456f8",new Layer({
+    pointer = window.__framerNew("pointer", "127:15-137:0", "#80e6b0b6",new Layer({
       parent: disks[i],
       width: 16,
       height: 16,
@@ -199,12 +199,12 @@
   legends = [];
 
   for (i = l = 0; l <= 4; i = ++l) {
-    legend = window.__framerNew("legend", "140:14-148:0", "#d2393d1e",new Layer({
+    legend = window.__framerNew("legend", "142:14-150:0", "#a1fb96dc",new Layer({
       width: Screen.width / 5 - 1,
       height: 9,
       backgroundColor: "null",
       x: (Screen.width / 5 - 1) * i,
-      y: 40,
+      y: 505,
       opacity: 0,
       Align: Align.center
     }));
@@ -214,7 +214,7 @@
   legendsColor = [];
 
   for (i = m = 0; m <= 4; i = ++m) {
-    legendColor = window.__framerNew("legendColor", "153:19-163:0", "#9e67a841",new Layer({
+    legendColor = window.__framerNew("legendColor", "155:19-165:0", "#16e2a01ff",new Layer({
       parent: legends[i],
       width: 11,
       height: 11,
@@ -231,7 +231,7 @@
   legendstext = [];
 
   for (i = n = 0; n <= 4; i = ++n) {
-    legendtext = window.__framerNew("legendtext", "168:18-181:0", "#afe11437",new TextLayer({
+    legendtext = window.__framerNew("legendtext", "170:18-183:0", "#1051c1c40",new TextLayer({
       parent: legends[i],
       width: Screen.width / 5 - 1,
       backgroundColor: "null",
@@ -258,14 +258,25 @@
     textAlign: "center"
   }));
 
-  Prompt = window.__framerNew("Prompt", "197:13-207:0", "#10486bed6",new TextLayer({
+  Prompt = window.__framerNew("Prompt", "197:13-205:0", "#10486bed6",new TextLayer({
     parent: PromptBox,
     x: Align.center,
     fontFamily: "Avenir",
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: 300,
     text: "",
     textAlign: "center"
+  }));
+
+  TutorialText = window.__framerNew("TutorialText", "206:19-216:0", "#15adba913",new TextLayer({
+    parent: tutorial,
+    x: Align.center,
+    fontFamily: "Avenir",
+    fontSize: 15,
+    fontWeight: 300,
+    text: "Tap and hold anywhere to aim",
+    textAlign: "center",
+    color: "black"
   }));
 
   oval.states.a = {
@@ -280,7 +291,7 @@
 
   button2.onTapStart(function() {
     var o, q, ref, ref1, s;
-    window.__framerAnimation("#a46eb6fe",oval.animate("b"));
+    window.__framerAnimation("#d769a89c",window.__framerNew(undefined, "undefined", "#d769a89c",oval.animate("b")));
     counter = (counter + 1) % 5;
     for (i = o = 0; o <= 4; i = ++o) {
       disks[i].opacity = 0;
@@ -292,6 +303,8 @@
     targetPrompt.color = Palette[counter];
     targetPrompt.textAlign = "center";
     targetPrompt.x = Align.center;
+    TutorialText.text = "Release to confirm";
+    TutorialText.x = Align.center;
     if (counter !== 0) {
       for (i = q = 0, ref = counter - 1; 0 <= ref ? q <= ref : q >= ref; i = 0 <= ref ? ++q : --q) {
         pointers[i].opacity = 1;
@@ -343,16 +356,16 @@
 
   button2.onTapEnd(function() {
     var LandmarkDistance;
-    window.__framerAnimation("#175031275",oval.animate("a"));
+    window.__framerAnimation("#a612ba70",window.__framerNew(undefined, "undefined", "#a612ba70",oval.animate("a")));
     counter2 = (counter2 + 1) % 5;
     disks[counter2].animate({
       properties: {
         opacity: 1
       }
     });
-    button2.html = counter2;
     button2.color = "black";
-    button.html = "peek";
+    TutorialText.text = "Tap and hold anywhere to aim";
+    TutorialText.x = Align.center;
     LandmarkDistance = distance(coordinates, targetCoordinatesGL[counter]);
     if (LandmarkDistance < 1000) {
       return pointers[counter].y = 95;
@@ -393,12 +406,12 @@
     } else {
       b = 360 - r;
     }
-    return window.__framerAnimation("#fc1fc432",compass.animate({
+    return window.__framerAnimation("#cbe21df0",window.__framerNew(undefined, "undefined", "#cbe21df0",compass.animate({
       properties: {
         rotation: NorthAngle
       },
       time: 0.3
-    }));
+    })));
   });
 
   intro = function() {
@@ -409,6 +422,30 @@
       });
     });
   };
+
+  pulseUp = window.__framerAnimation("#14542eb17",window.__framerNew("pulseUp", "380:14-386:0", "#14542eb17",new Animation({
+    layer: TutorialText,
+    properties: {
+      scale: 1.03,
+      opacity: .7
+    },
+    time: 0.9
+  })));
+
+  shrink = window.__framerAnimation("#11c5d0daf",window.__framerNew("shrink", "387:13-394:38", "#11c5d0daf",new Animation({
+    layer: TutorialText,
+    properties: {
+      scale: 1.01,
+      opacity: .3
+    },
+    time: 0.9
+  })));
+
+  pulseUp.on(Events.AnimationEnd, shrink.start);
+
+  shrink.on(Events.AnimationEnd, pulseUp.start);
+
+  pulseUp.start();
 
   intro();
 

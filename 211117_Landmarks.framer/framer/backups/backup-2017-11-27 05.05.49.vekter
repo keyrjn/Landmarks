@@ -184,156 +184,6 @@
             "radiusBottomRight" : 0,
             "children" : [
               {
-                "radiusBottomLeft" : 6,
-                "rotation" : 0,
-                "__class" : "RectangleNode",
-                "id" : "=D*eUj2\/",
-                "fillColor" : "rgba(220, 220, 220, 0.3)",
-                "aspectRatioLocked" : false,
-                "widthFactor" : null,
-                "opacity" : 1,
-                "clip" : false,
-                "borderColor" : "#222",
-                "left" : 53,
-                "locked" : false,
-                "fillGradient" : {
-                  "end" : "rgba(0,0,0,0)",
-                  "alpha" : 1,
-                  "angle" : 0,
-                  "__class" : "LinearGradient",
-                  "start" : "black"
-                },
-                "radius" : 6,
-                "boxShadows" : [
-                  {
-                    "x" : 0,
-                    "color" : "rgba(0,0,0,0.25)",
-                    "enabled" : false,
-                    "y" : 2,
-                    "__class" : "BoxShadow",
-                    "inset" : false,
-                    "blur" : 5
-                  }
-                ],
-                "centerAnchorX" : 0.484,
-                "borderPerSide" : false,
-                "fillType" : "color",
-                "radiusBottomRight" : 6,
-                "children" : [
-                  {
-                    "__class" : "TextNode",
-                    "locked" : false,
-                    "centerAnchorX" : 0.4980544747081712,
-                    "parentid" : "=D*eUj2\/",
-                    "rotation" : 0,
-                    "top" : null,
-                    "right" : null,
-                    "styledText" : {
-                      "blocks" : [
-                        {
-                          "depth" : 0,
-                          "inlineStyleRanges" : [
-                            {
-                              "length" : 38,
-                              "style" : "FONT:.SFNSText|SFUIText-Regular|.SFUIText",
-                              "offset" : 0
-                            },
-                            {
-                              "length" : 38,
-                              "style" : "LETTERSPACING:0",
-                              "offset" : 0
-                            },
-                            {
-                              "length" : 38,
-                              "style" : "LINEHEIGHT:1.2",
-                              "offset" : 0
-                            },
-                            {
-                              "length" : 38,
-                              "style" : "COLOR:rgb(135, 135, 135)",
-                              "offset" : 0
-                            },
-                            {
-                              "length" : 38,
-                              "style" : "SIZE:12",
-                              "offset" : 0
-                            }
-                          ],
-                          "entityRanges" : [
-
-                          ],
-                          "data" : {
-                            "emptyStyle" : [
-                              "FONT:.SFNSText|SFUIText-Regular|.SFUIText",
-                              "LETTERSPACING:0",
-                              "LINEHEIGHT:1.2",
-                              "COLOR:rgb(135, 135, 135)",
-                              "SIZE:12"
-                            ]
-                          },
-                          "text" : "hold to view your discovered landmarks",
-                          "key" : "fptvk",
-                          "type" : "unstyled"
-                        }
-                      ],
-                      "__class" : "StyledTextDraft",
-                      "entityMap" : {
-
-                      }
-                    },
-                    "name" : null,
-                    "shadows" : [
-                      {
-                        "y" : 2,
-                        "enabled" : false,
-                        "blur" : 5,
-                        "x" : 0,
-                        "__class" : "Shadow",
-                        "color" : "rgba(0,0,0,0.25)"
-                      }
-                    ],
-                    "id" : "qObO8l`_",
-                    "x" : 70,
-                    "constraintsLocked" : false,
-                    "left" : null,
-                    "bottom" : 9,
-                    "height" : 14,
-                    "opacity" : 1,
-                    "width" : 225,
-                    "widthFactor" : null,
-                    "targetName" : null,
-                    "heightFactor" : null,
-                    "editable" : false,
-                    "visible" : true,
-                    "centerAnchorY" : 0.5875,
-                    "autoSize" : true,
-                    "y" : 37
-                  }
-                ],
-                "fillEnabled" : false,
-                "parentid" : ",FTY7&Wp",
-                "borderRight" : 1,
-                "name" : "button",
-                "height" : 40,
-                "borderWidth" : 1,
-                "top" : null,
-                "borderTop" : 1,
-                "radiusTopRight" : 6,
-                "borderBottom" : 1,
-                "borderEnabled" : false,
-                "constraintsLocked" : false,
-                "right" : 65,
-                "radiusPerCorner" : false,
-                "centerAnchorY" : 0.8950524737631185,
-                "visible" : true,
-                "borderLeft" : 1,
-                "heightFactor" : null,
-                "radiusTopLeft" : 6,
-                "targetName" : "button",
-                "bottom" : 50,
-                "width" : 257
-              },
-              {
                 "radiusBottomLeft" : 0,
                 "rotation" : 0,
                 "__class" : "RectangleNode",
@@ -423,13 +273,13 @@
                     "constraintsLocked" : false,
                     "right" : 40,
                     "radiusPerCorner" : false,
-                    "centerAnchorY" : 0.7657200811359026,
+                    "centerAnchorY" : 0.7782764811490126,
                     "visible" : true,
                     "borderLeft" : 1,
                     "heightFactor" : null,
                     "radiusTopLeft" : 0,
                     "targetName" : "tutorial",
-                    "bottom" : 88,
+                    "bottom" : 96,
                     "width" : 295
                   },
                   {
@@ -477,6 +327,202 @@
                     "opacity" : 1,
                     "centerAnchorY" : 0.08976660682226212,
                     "visible" : true
+                  },
+                  {
+                    "radiusBottomLeft" : 50,
+                    "rotation" : 0,
+                    "__class" : "RectangleNode",
+                    "id" : "t`8<bl`f",
+                    "fillColor" : "rgba(168, 168, 168, 0.3)",
+                    "aspectRatioLocked" : false,
+                    "widthFactor" : null,
+                    "opacity" : 1,
+                    "clip" : false,
+                    "borderColor" : "rgba(189, 189, 189, 0.3)",
+                    "left" : null,
+                    "locked" : false,
+                    "fillGradient" : {
+                      "end" : "rgba(0,0,0,0)",
+                      "alpha" : 1,
+                      "angle" : 0,
+                      "__class" : "LinearGradient",
+                      "start" : "black"
+                    },
+                    "radius" : 50,
+                    "boxShadows" : [
+                      {
+                        "x" : 0,
+                        "color" : "rgba(0,0,0,0.25)",
+                        "enabled" : false,
+                        "y" : 2,
+                        "__class" : "BoxShadow",
+                        "inset" : false,
+                        "blur" : 5
+                      }
+                    ],
+                    "centerAnchorX" : 0.9146666666666666,
+                    "borderPerSide" : false,
+                    "fillType" : "color",
+                    "radiusBottomRight" : 50,
+                    "children" : [
+                      {
+                        "__class" : "SVGNode",
+                        "fillType" : "color",
+                        "originalFilename" : "location_searching",
+                        "centerAnchorX" : 0.5166666666666667,
+                        "parentid" : "t`8<bl`f",
+                        "rotation" : 0,
+                        "locked" : false,
+                        "intrinsicWidth" : 24,
+                        "top" : null,
+                        "right" : null,
+                        "intrinsicHeight" : 24,
+                        "name" : "locationIcon",
+                        "shadows" : [
+                          {
+                            "y" : 2,
+                            "enabled" : false,
+                            "blur" : 5,
+                            "x" : 0,
+                            "__class" : "Shadow",
+                            "color" : "rgba(0,0,0,0.25)"
+                          }
+                        ],
+                        "aspectRatioLocked" : true,
+                        "id" : "pKU1gATz",
+                        "svg" : "<?xml version=\"1.0\"?><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M20.94 11A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z\"><\/path><\/svg>",
+                        "constraintsLocked" : false,
+                        "left" : null,
+                        "bottom" : null,
+                        "height" : 15,
+                        "fillGradient" : {
+                          "end" : "rgba(0,0,0,0)",
+                          "alpha" : 1,
+                          "angle" : 0,
+                          "__class" : "LinearGradient",
+                          "start" : "black"
+                        },
+                        "width" : 15,
+                        "widthFactor" : null,
+                        "targetName" : "locationIcon",
+                        "heightFactor" : null,
+                        "fillColor" : "rgb(176, 176, 176)",
+                        "opacity" : 1,
+                        "centerAnchorY" : 0.5166666666666667,
+                        "visible" : true
+                      }
+                    ],
+                    "fillEnabled" : false,
+                    "parentid" : "qt3GW|cn",
+                    "borderRight" : 2,
+                    "name" : "locationCircle",
+                    "height" : 30,
+                    "borderWidth" : 2,
+                    "top" : 20,
+                    "borderTop" : 2,
+                    "radiusTopRight" : 50,
+                    "borderBottom" : 2,
+                    "borderEnabled" : true,
+                    "constraintsLocked" : false,
+                    "right" : 17,
+                    "radiusPerCorner" : false,
+                    "centerAnchorY" : 0.06283662477558348,
+                    "visible" : true,
+                    "borderLeft" : 2,
+                    "heightFactor" : null,
+                    "radiusTopLeft" : 50,
+                    "targetName" : "locationCircle",
+                    "bottom" : null,
+                    "width" : 30
+                  },
+                  {
+                    "__class" : "TextNode",
+                    "locked" : false,
+                    "centerAnchorX" : 0.9146666666666666,
+                    "parentid" : "qt3GW|cn",
+                    "rotation" : 0,
+                    "top" : 54,
+                    "right" : 17,
+                    "styledText" : {
+                      "blocks" : [
+                        {
+                          "depth" : 0,
+                          "inlineStyleRanges" : [
+                            {
+                              "length" : 6,
+                              "style" : "FONT:.SFNSText|SFUIText-Regular|.SFUIText",
+                              "offset" : 0
+                            },
+                            {
+                              "length" : 6,
+                              "style" : "LETTERSPACING:0",
+                              "offset" : 0
+                            },
+                            {
+                              "length" : 6,
+                              "style" : "LINEHEIGHT:1.2",
+                              "offset" : 0
+                            },
+                            {
+                              "length" : 6,
+                              "style" : "SIZE:10",
+                              "offset" : 0
+                            },
+                            {
+                              "length" : 6,
+                              "style" : "COLOR:rgb(184, 184, 184)",
+                              "offset" : 0
+                            }
+                          ],
+                          "entityRanges" : [
+
+                          ],
+                          "data" : {
+                            "emptyStyle" : [
+                              "FONT:.SFNSText|SFUIText-Regular|.SFUIText",
+                              "LETTERSPACING:0",
+                              "LINEHEIGHT:1.2",
+                              "SIZE:10",
+                              "COLOR:rgb(184, 184, 184)"
+                            ]
+                          },
+                          "text" : "locate",
+                          "key" : "fptvk",
+                          "type" : "unstyled"
+                        }
+                      ],
+                      "__class" : "StyledTextDraft",
+                      "entityMap" : {
+
+                      }
+                    },
+                    "name" : null,
+                    "shadows" : [
+                      {
+                        "y" : 2,
+                        "enabled" : false,
+                        "blur" : 5,
+                        "x" : 0,
+                        "__class" : "Shadow",
+                        "color" : "rgba(0,0,0,0.25)"
+                      }
+                    ],
+                    "id" : "(;}VA$W*",
+                    "x" : 328,
+                    "constraintsLocked" : false,
+                    "left" : null,
+                    "bottom" : null,
+                    "height" : 12,
+                    "opacity" : 1,
+                    "width" : 30,
+                    "widthFactor" : null,
+                    "targetName" : null,
+                    "heightFactor" : null,
+                    "editable" : false,
+                    "visible" : true,
+                    "centerAnchorY" : 0.1077199281867145,
+                    "autoSize" : true,
+                    "y" : 45
                   }
                 ],
                 "fillEnabled" : false,
@@ -640,6 +686,277 @@
             "clip" : false
           },
           {
+            "radiusBottomLeft" : 6,
+            "rotation" : 0,
+            "__class" : "RectangleNode",
+            "id" : "=D*eUj2\/",
+            "fillColor" : "rgba(220, 220, 220, 0.3)",
+            "aspectRatioLocked" : false,
+            "widthFactor" : null,
+            "opacity" : 1,
+            "clip" : false,
+            "borderColor" : "#222",
+            "left" : 53,
+            "locked" : false,
+            "fillGradient" : {
+              "end" : "rgba(0,0,0,0)",
+              "alpha" : 1,
+              "angle" : 0,
+              "__class" : "LinearGradient",
+              "start" : "black"
+            },
+            "radius" : 6,
+            "boxShadows" : [
+              {
+                "x" : 0,
+                "color" : "rgba(0,0,0,0.25)",
+                "enabled" : false,
+                "y" : 2,
+                "__class" : "BoxShadow",
+                "inset" : false,
+                "blur" : 5
+              }
+            ],
+            "centerAnchorX" : 0.484,
+            "borderPerSide" : false,
+            "fillType" : "color",
+            "radiusBottomRight" : 6,
+            "children" : [
+              {
+                "radiusBottomLeft" : 10,
+                "rotation" : 0,
+                "__class" : "RectangleNode",
+                "id" : "jbRmKEq`",
+                "fillColor" : "rgba(125, 125, 125, 0.5)",
+                "aspectRatioLocked" : false,
+                "widthFactor" : null,
+                "opacity" : 1,
+                "clip" : false,
+                "borderColor" : "#222",
+                "left" : null,
+                "locked" : false,
+                "fillGradient" : {
+                  "end" : "rgba(0,0,0,0)",
+                  "alpha" : 1,
+                  "angle" : 0,
+                  "__class" : "LinearGradient",
+                  "start" : "black"
+                },
+                "radius" : 10,
+                "boxShadows" : [
+                  {
+                    "x" : 0,
+                    "color" : "rgba(0,0,0,0.25)",
+                    "enabled" : false,
+                    "y" : 1,
+                    "__class" : "BoxShadow",
+                    "inset" : false,
+                    "blur" : 1
+                  }
+                ],
+                "centerAnchorX" : 0.5252918287937743,
+                "borderPerSide" : false,
+                "fillType" : "color",
+                "radiusBottomRight" : 10,
+                "children" : [
+
+                ],
+                "fillEnabled" : true,
+                "parentid" : "=D*eUj2\/",
+                "borderRight" : 1,
+                "name" : null,
+                "height" : 2,
+                "borderWidth" : 1,
+                "top" : null,
+                "borderTop" : 1,
+                "radiusTopRight" : 10,
+                "borderBottom" : 1,
+                "borderEnabled" : false,
+                "constraintsLocked" : false,
+                "right" : 102,
+                "radiusPerCorner" : false,
+                "centerAnchorY" : 1.125,
+                "visible" : true,
+                "borderLeft" : 1,
+                "heightFactor" : null,
+                "radiusTopLeft" : 10,
+                "targetName" : null,
+                "bottom" : -6,
+                "width" : 40
+              },
+              {
+                "__class" : "TextNode",
+                "locked" : false,
+                "centerAnchorX" : 0.4980544747081712,
+                "parentid" : "=D*eUj2\/",
+                "rotation" : 0,
+                "top" : null,
+                "right" : null,
+                "styledText" : {
+                  "blocks" : [
+                    {
+                      "depth" : 0,
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 38,
+                          "style" : "FONT:.SFNSText|SFUIText-Regular|.SFUIText",
+                          "offset" : 0
+                        },
+                        {
+                          "length" : 38,
+                          "style" : "LETTERSPACING:0",
+                          "offset" : 0
+                        },
+                        {
+                          "length" : 38,
+                          "style" : "LINEHEIGHT:1.2",
+                          "offset" : 0
+                        },
+                        {
+                          "length" : 38,
+                          "style" : "SIZE:12",
+                          "offset" : 0
+                        },
+                        {
+                          "length" : 38,
+                          "style" : "COLOR:rgb(209, 209, 209)",
+                          "offset" : 0
+                        }
+                      ],
+                      "entityRanges" : [
+
+                      ],
+                      "data" : {
+                        "emptyStyle" : [
+                          "FONT:.SFNSText|SFUIText-Regular|.SFUIText",
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "SIZE:12",
+                          "COLOR:rgb(209, 209, 209)"
+                        ]
+                      },
+                      "text" : "hold to view your discovered landmarks",
+                      "key" : "fptvk",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "__class" : "StyledTextDraft",
+                  "entityMap" : {
+
+                  }
+                },
+                "name" : null,
+                "shadows" : [
+                  {
+                    "y" : 2,
+                    "enabled" : false,
+                    "blur" : 5,
+                    "x" : 0,
+                    "__class" : "Shadow",
+                    "color" : "rgba(0,0,0,0.25)"
+                  }
+                ],
+                "id" : "qObO8l`_",
+                "x" : 70,
+                "constraintsLocked" : false,
+                "left" : null,
+                "bottom" : 9,
+                "height" : 14,
+                "opacity" : 1,
+                "width" : 225,
+                "widthFactor" : null,
+                "targetName" : null,
+                "heightFactor" : null,
+                "editable" : false,
+                "visible" : true,
+                "centerAnchorY" : 0.5875,
+                "autoSize" : true,
+                "y" : 37
+              }
+            ],
+            "fillEnabled" : false,
+            "parentid" : "oW4$|\/ZW",
+            "borderRight" : 1,
+            "name" : "button",
+            "height" : 40,
+            "borderWidth" : 1,
+            "top" : null,
+            "borderTop" : 1,
+            "radiusTopRight" : 6,
+            "borderBottom" : 1,
+            "borderEnabled" : false,
+            "constraintsLocked" : false,
+            "right" : 65,
+            "radiusPerCorner" : false,
+            "centerAnchorY" : 0.8500749625187406,
+            "visible" : true,
+            "borderLeft" : 1,
+            "heightFactor" : null,
+            "radiusTopLeft" : 6,
+            "targetName" : "button",
+            "bottom" : 80,
+            "width" : 257
+          },
+          {
+            "radiusBottomLeft" : 0,
+            "rotation" : 0,
+            "__class" : "ImageNode",
+            "id" : "M;\/PwoG}",
+            "fillColor" : "transparent",
+            "aspectRatioLocked" : true,
+            "imageBackgroundSize" : "Cover",
+            "widthFactor" : null,
+            "opacity" : 1,
+            "clip" : false,
+            "borderColor" : "#222",
+            "left" : null,
+            "locked" : false,
+            "radius" : 0,
+            "boxShadows" : [
+              {
+                "x" : 0,
+                "color" : "rgba(0,0,0,0.25)",
+                "enabled" : false,
+                "y" : 2,
+                "__class" : "BoxShadow",
+                "inset" : false,
+                "blur" : 5
+              }
+            ],
+            "centerAnchorX" : 0.5,
+            "borderPerSide" : false,
+            "radiusBottomRight" : 0,
+            "children" : [
+
+            ],
+            "fillEnabled" : false,
+            "parentid" : "oW4$|\/ZW",
+            "borderRight" : 1,
+            "image" : "EuCRs3c7kB188A7rbgH6Br8Edmdi2SRnCJDUiyJsKzNGOQzMnztsXjR8S0SPlxkyIA3yRBU4tdBV36H2gQA.svg",
+            "name" : "compass",
+            "height" : 91,
+            "borderWidth" : 1,
+            "top" : null,
+            "borderTop" : 1,
+            "radiusTopRight" : 0,
+            "intrinsicWidth" : 93,
+            "borderBottom" : 1,
+            "originalFilename" : "compass3.svg",
+            "borderEnabled" : false,
+            "constraintsLocked" : false,
+            "right" : null,
+            "radiusPerCorner" : false,
+            "centerAnchorY" : 0.5014992503748126,
+            "visible" : true,
+            "borderLeft" : 1,
+            "heightFactor" : null,
+            "intrinsicHeight" : 91,
+            "radiusTopLeft" : 0,
+            "targetName" : "compass",
+            "bottom" : null,
+            "width" : 93
+          },
+          {
             "radiusBottomLeft" : 0,
             "rotation" : 0,
             "__class" : "RectangleNode",
@@ -700,113 +1017,6 @@
             "targetName" : "PromptBox",
             "bottom" : null,
             "width" : 127
-          },
-          {
-            "radiusBottomLeft" : 50,
-            "rotation" : 0,
-            "__class" : "RectangleNode",
-            "id" : "t`8<bl`f",
-            "fillColor" : "rgba(168, 168, 168, 0.3)",
-            "aspectRatioLocked" : false,
-            "widthFactor" : null,
-            "opacity" : 1,
-            "clip" : false,
-            "borderColor" : "#222",
-            "left" : null,
-            "locked" : false,
-            "fillGradient" : {
-              "end" : "rgba(0,0,0,0)",
-              "alpha" : 1,
-              "angle" : 0,
-              "__class" : "LinearGradient",
-              "start" : "black"
-            },
-            "radius" : 50,
-            "boxShadows" : [
-              {
-                "x" : 0,
-                "color" : "rgba(0,0,0,0.25)",
-                "enabled" : false,
-                "y" : 2,
-                "__class" : "BoxShadow",
-                "inset" : false,
-                "blur" : 5
-              }
-            ],
-            "centerAnchorX" : 0.9146666666666666,
-            "borderPerSide" : false,
-            "fillType" : "color",
-            "radiusBottomRight" : 50,
-            "children" : [
-              {
-                "__class" : "SVGNode",
-                "fillType" : "color",
-                "originalFilename" : "location_searching",
-                "centerAnchorX" : 0.5166666666666667,
-                "parentid" : "t`8<bl`f",
-                "rotation" : 0,
-                "locked" : false,
-                "intrinsicWidth" : 24,
-                "top" : null,
-                "right" : null,
-                "intrinsicHeight" : 24,
-                "name" : null,
-                "shadows" : [
-                  {
-                    "y" : 2,
-                    "enabled" : false,
-                    "blur" : 5,
-                    "x" : 0,
-                    "__class" : "Shadow",
-                    "color" : "rgba(0,0,0,0.25)"
-                  }
-                ],
-                "aspectRatioLocked" : true,
-                "id" : "pKU1gATz",
-                "svg" : "<?xml version=\"1.0\"?><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M20.94 11A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z\"><\/path><\/svg>",
-                "constraintsLocked" : false,
-                "left" : null,
-                "bottom" : null,
-                "height" : 15,
-                "fillGradient" : {
-                  "end" : "rgba(0,0,0,0)",
-                  "alpha" : 1,
-                  "angle" : 0,
-                  "__class" : "LinearGradient",
-                  "start" : "black"
-                },
-                "width" : 15,
-                "widthFactor" : null,
-                "targetName" : null,
-                "heightFactor" : null,
-                "fillColor" : "rgb(255, 255, 255)",
-                "opacity" : 1,
-                "centerAnchorY" : 0.5166666666666667,
-                "visible" : true
-              }
-            ],
-            "fillEnabled" : true,
-            "parentid" : "oW4$|\/ZW",
-            "borderRight" : 1,
-            "name" : "locationCircle",
-            "height" : 30,
-            "borderWidth" : 1,
-            "top" : null,
-            "borderTop" : 1,
-            "radiusTopRight" : 50,
-            "borderBottom" : 1,
-            "borderEnabled" : false,
-            "constraintsLocked" : false,
-            "right" : 17,
-            "radiusPerCorner" : false,
-            "centerAnchorY" : 0.8950524737631185,
-            "visible" : true,
-            "borderLeft" : 1,
-            "heightFactor" : null,
-            "radiusTopLeft" : 50,
-            "targetName" : "locationCircle",
-            "bottom" : 55,
-            "width" : 30
           },
           {
             "radiusBottomLeft" : 0,
@@ -1503,65 +1713,6 @@
             "targetName" : "targetPromptBox",
             "bottom" : null,
             "width" : 295
-          },
-          {
-            "radiusBottomLeft" : 0,
-            "rotation" : 0,
-            "__class" : "ImageNode",
-            "id" : "M;\/PwoG}",
-            "fillColor" : "transparent",
-            "aspectRatioLocked" : true,
-            "imageBackgroundSize" : "Cover",
-            "widthFactor" : null,
-            "opacity" : 1,
-            "clip" : false,
-            "borderColor" : "#222",
-            "left" : null,
-            "locked" : false,
-            "radius" : 0,
-            "boxShadows" : [
-              {
-                "x" : 0,
-                "color" : "rgba(0,0,0,0.25)",
-                "enabled" : false,
-                "y" : 2,
-                "__class" : "BoxShadow",
-                "inset" : false,
-                "blur" : 5
-              }
-            ],
-            "centerAnchorX" : 0.5,
-            "borderPerSide" : false,
-            "radiusBottomRight" : 0,
-            "children" : [
-
-            ],
-            "fillEnabled" : false,
-            "parentid" : "oW4$|\/ZW",
-            "borderRight" : 1,
-            "image" : "EuCRs3c7kB188A7rbgH6Br8Edmdi2SRnCJDUiyJsKzNGOQzMnztsXjR8S0SPlxkyIA3yRBU4tdBV36H2gQA.svg",
-            "name" : "compass",
-            "height" : 91,
-            "borderWidth" : 1,
-            "top" : null,
-            "borderTop" : 1,
-            "radiusTopRight" : 0,
-            "intrinsicWidth" : 93,
-            "borderBottom" : 1,
-            "originalFilename" : "compass3.svg",
-            "borderEnabled" : false,
-            "constraintsLocked" : false,
-            "right" : null,
-            "radiusPerCorner" : false,
-            "centerAnchorY" : 0.5,
-            "visible" : true,
-            "borderLeft" : 1,
-            "heightFactor" : null,
-            "intrinsicHeight" : 91,
-            "radiusTopLeft" : 0,
-            "targetName" : "compass",
-            "bottom" : null,
-            "width" : 93
           }
         ],
         "height" : 667,
