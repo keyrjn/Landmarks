@@ -32,7 +32,7 @@
 		<script src="framer/framer.generated.js?nocache=55f376a1f3792767461b8513f28e3565"></script>
 		<script src="framer/framer.modules.js?nocache=bf9fd6e98d5e3d5ab54fc50d164f3341"></script>
 		<script src="framer/framer.vekter.js"></script>
-		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 1;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};(function() {
+		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 54;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
   var DeviceOrientationManager, Palette, Prompt, TargetNames, coordinates, counter, counter2, disk, disks, distance, error, heading, i, intro, j, k, l, legend, legendColor, legends, legendsColor, legendstext, legendtext, m, map, mapElement, mapLayer, mapboxgl, n, orientationManager, pointer, pointers, rotationNormalizer, success, targetCoordinatesGL, targetPrompt;
 
   DeviceOrientationManager = require("DeviceOrientationManager").DeviceOrientationManager;
@@ -83,20 +83,20 @@
 
   targetCoordinatesGL = [
     {
-      latitude: 55.680,
-      longitude: 12.587
-    }, {
       latitude: 55.672,
       longitude: 12.523
     }, {
       latitude: 55.674,
       longitude: 12.569
     }, {
-      latitude: 55.692,
-      longitude: 12.599
+      latitude: 55.663,
+      longitude: 12.538
     }, {
       latitude: 55.674,
       longitude: 12.598
+    }, {
+      latitude: 55.680,
+      longitude: 12.587
     }
   ];
 
@@ -161,7 +161,7 @@
 
   Palette = ["orange", "green", "blue", "purple", "red"];
 
-  TargetNames = ["Nyhavn Boats", "København Zoo", "Tivoli", "Little Mermaid", "Christiania Church"];
+  TargetNames = ["København Zoo", "Tivoli", "Vestre Kirkegard", "Christiania Church", "Nyhavn Boats"];
 
   disks = [];
 
@@ -280,7 +280,7 @@
 
   button2.onTapStart(function() {
     var o, q, ref, ref1, s;
-    oval.animate("b");
+    window.__framerAnimation("#a46eb6fe",oval.animate("b"));
     counter = (counter + 1) % 5;
     for (i = o = 0; o <= 4; i = ++o) {
       disks[i].opacity = 0;
@@ -343,7 +343,7 @@
 
   button2.onTapEnd(function() {
     var LandmarkDistance;
-    oval.animate("a");
+    window.__framerAnimation("#175031275",oval.animate("a"));
     counter2 = (counter2 + 1) % 5;
     disks[counter2].animate({
       properties: {
@@ -353,18 +353,6 @@
     button2.html = counter2;
     button2.color = "black";
     button.html = "peek";
-    Prompt.text = "";
-    Utils.delay(1, function() {
-      Prompt.text = "Tap & Hold for Next ";
-      Prompt.textAlign = "center";
-      return Prompt.x = Align.center;
-    });
-    Utils.delay(.5, function() {
-      targetPrompt.text = "Not Bad";
-      targetPrompt.color = Palette[counter];
-      targetPrompt.textAlign = "center";
-      return targetPrompt.x = Align.center;
-    });
     LandmarkDistance = distance(coordinates, targetCoordinatesGL[counter]);
     if (LandmarkDistance < 1000) {
       return pointers[counter].y = 95;
@@ -405,12 +393,12 @@
     } else {
       b = 360 - r;
     }
-    return compass.animate({
+    return window.__framerAnimation("#fc1fc432",compass.animate({
       properties: {
         rotation: NorthAngle
       },
       time: 0.3
-    });
+    }));
   });
 
   intro = function() {

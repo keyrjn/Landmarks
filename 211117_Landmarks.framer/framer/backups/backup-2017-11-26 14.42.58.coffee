@@ -42,7 +42,7 @@ error = (msg) ->
 targetCoordinatesGL = [
 	{latitude : 55.672, longitude : 12.523},
 	{latitude : 55.674, longitude : 12.569},
-	{latitude : 55.663, longitude : 12.538},
+	{latitude : 55.663, longitude : 12.599},
 	{latitude : 55.674, longitude : 12.598},
 	{latitude : 55.680, longitude : 12.587}
 	]
@@ -106,7 +106,7 @@ orientationManager.onOrientationChange (data) ->
 
 
 Palette = ["orange","green","blue","purple","red"]
-TargetNames = ["København Zoo","Tivoli","Vestre Kirkegard","Christiania Church","Nyhavn Boats",]
+TargetNames = ["Nyhavn Boats","København Zoo","Tivoli","Little Mermaid","Christiania Church"]
 
 disks = []
 for i in [0..4]
@@ -143,7 +143,7 @@ for i in [0..4]
 		height:9
 		backgroundColor: "null"
 		x: ((Screen.width / 5 - 1)*i)
-		y: 520
+		y: 40
 		opacity: 0
 		Align: Align.center
 	legends.push(legend)
@@ -204,15 +204,6 @@ Prompt = new TextLayer
 		text: ""
 		textAlign: "center"
 
-TutorialText = new TextLayer
-		parent:tutorial
-		x:Align.center
-		fontFamily: "Avenir"
-		fontSize: 15
-		fontWeight: 300
-		text: "Tap and hold anywhere to aim"
-		textAlign: "center"
-		color: "black"
 
 
 oval.states.a =
@@ -241,11 +232,6 @@ button2.onTapStart ->
 	targetPrompt.color = Palette[counter]
 	targetPrompt.textAlign= "center"
 	targetPrompt.x= Align.center
-	
-	
-	TutorialText.text="Release to confirm"
-	TutorialText.x= Align.center
-
 
 	if counter != 0
 		for i in [0..counter-1]
@@ -258,11 +244,6 @@ button2.onTapStart ->
 	Prompt.text = "Point at"
 	Prompt.textAlign= "center"
 	Prompt.x= Align.center
-	
-	Utils.delay 3,->
-		TutorialText.text="Release to confirm"
-		TutorialText.x= Align.center
-
 # 	if counter == 0
 # 		for i in [0..4]
 # 			pointers[i].opacity=0
@@ -309,22 +290,19 @@ button2.onTapEnd ->
 	button2.color = "black"
 	button.html="peek"
 
-	TutorialText.text="Tap and hold anywhere to aim"
-	TutorialText.x= Align.center
 
+	Prompt.text = ""
 
-# 	Prompt.text = ""
-# 
-# 	Utils.delay 1,->
-# 		Prompt.text = "Tap & Hold for Next "
-# 		Prompt.textAlign= "center"
-# 		Prompt.x= Align.center
-# 
-# 	Utils.delay .5,->
-# 		targetPrompt.text = "Not Bad"
-# 		targetPrompt.color = Palette[counter]
-# 		targetPrompt.textAlign= "center"
-# 		targetPrompt.x= Align.center
+	Utils.delay 1,->
+		Prompt.text = "Tap & Hold for Next "
+		Prompt.textAlign= "center"
+		Prompt.x= Align.center
+
+	Utils.delay .5,->
+		targetPrompt.text = "Not Bad"
+		targetPrompt.color = Palette[counter]
+		targetPrompt.textAlign= "center"
+		targetPrompt.x= Align.center
 
 
 	LandmarkDistance =distance(coordinates, targetCoordinatesGL[counter])
@@ -378,27 +356,6 @@ intro = ->
 	navigator.geolocation.getCurrentPosition(success, error)
 	Utils.delay 1, ->
 		map.flyTo({center: [coordinates.longitude, coordinates.latitude]});
-
-
-pulseUp = new Animation
-	layer: TutorialText
-	properties:
-		scale: 1.03
-		opacity: .7
-	time: 0.9
- 
-shrink = new Animation
-	layer: TutorialText
-	properties: 
-		scale: 1.01
-		opacity: .2
-	time: 0.9
- 
-# Alternate between the two animations 
-pulseUp.on(Events.AnimationEnd, shrink.start)
-shrink.on(Events.AnimationEnd, pulseUp.start)
- 
-pulseUp.start()
 
 
 intro()

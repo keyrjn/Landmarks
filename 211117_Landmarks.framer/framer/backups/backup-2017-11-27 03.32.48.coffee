@@ -210,7 +210,7 @@ TutorialText = new TextLayer
 		fontFamily: "Avenir"
 		fontSize: 15
 		fontWeight: 300
-		text: "Tap and hold anywhere to aim"
+		text: "Long Press anywhere on the screen"
 		textAlign: "center"
 		color: "black"
 
@@ -241,11 +241,6 @@ button2.onTapStart ->
 	targetPrompt.color = Palette[counter]
 	targetPrompt.textAlign= "center"
 	targetPrompt.x= Align.center
-	
-	
-	TutorialText.text="Release to confirm"
-	TutorialText.x= Align.center
-
 
 	if counter != 0
 		for i in [0..counter-1]
@@ -258,11 +253,6 @@ button2.onTapStart ->
 	Prompt.text = "Point at"
 	Prompt.textAlign= "center"
 	Prompt.x= Align.center
-	
-	Utils.delay 3,->
-		TutorialText.text="Release to confirm"
-		TutorialText.x= Align.center
-
 # 	if counter == 0
 # 		for i in [0..4]
 # 			pointers[i].opacity=0
@@ -308,9 +298,6 @@ button2.onTapEnd ->
 	button2.html= counter2
 	button2.color = "black"
 	button.html="peek"
-
-	TutorialText.text="Tap and hold anywhere to aim"
-	TutorialText.x= Align.center
 
 
 # 	Prompt.text = ""
@@ -378,27 +365,6 @@ intro = ->
 	navigator.geolocation.getCurrentPosition(success, error)
 	Utils.delay 1, ->
 		map.flyTo({center: [coordinates.longitude, coordinates.latitude]});
-
-
-pulseUp = new Animation
-	layer: TutorialText
-	properties:
-		scale: 1.03
-		opacity: .7
-	time: 0.9
- 
-shrink = new Animation
-	layer: TutorialText
-	properties: 
-		scale: 1.01
-		opacity: .2
-	time: 0.9
- 
-# Alternate between the two animations 
-pulseUp.on(Events.AnimationEnd, shrink.start)
-shrink.on(Events.AnimationEnd, pulseUp.start)
- 
-pulseUp.start()
 
 
 intro()

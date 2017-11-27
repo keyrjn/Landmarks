@@ -241,8 +241,6 @@ button2.onTapStart ->
 	targetPrompt.color = Palette[counter]
 	targetPrompt.textAlign= "center"
 	targetPrompt.x= Align.center
-	
-	
 	TutorialText.text="Release to confirm"
 	TutorialText.x= Align.center
 
@@ -258,11 +256,6 @@ button2.onTapStart ->
 	Prompt.text = "Point at"
 	Prompt.textAlign= "center"
 	Prompt.x= Align.center
-	
-	Utils.delay 3,->
-		TutorialText.text="Release to confirm"
-		TutorialText.x= Align.center
-
 # 	if counter == 0
 # 		for i in [0..4]
 # 			pointers[i].opacity=0
@@ -309,7 +302,7 @@ button2.onTapEnd ->
 	button2.color = "black"
 	button.html="peek"
 
-	TutorialText.text="Tap and hold anywhere to aim"
+	TutorialText.text="Release to confirm"
 	TutorialText.x= Align.center
 
 
