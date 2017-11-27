@@ -210,7 +210,7 @@ TutorialText = new TextLayer
 		fontFamily: "Avenir"
 		fontSize: 15
 		fontWeight: 300
-		text: "Tap and hold to aim"
+		text: "Tap and hold anywhere to aim"
 		textAlign: "center"
 		color: "black"
 
@@ -305,7 +305,7 @@ button2.onTapEnd ->
 
 # 	button2.html= counter2
 	button2.color = "black"
-	button.html="peek"
+# 	button.html="peek"
 
 	TutorialText.text="Tap and hold anywhere to aim"
 	TutorialText.x= Align.center
@@ -389,7 +389,7 @@ shrink = new Animation
 	layer: TutorialText
 	properties: 
 		scale: 1.01
-		opacity: .2
+		opacity: .3
 	time: 0.9
  
 # Alternate between the two animations 
